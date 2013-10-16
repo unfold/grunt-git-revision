@@ -12,6 +12,7 @@ module.exports = function(grunt) {
   grunt.registerTask('revision', 'Retrieves the current git revision', function(property) {
     var options = this.options({
       property: 'meta.revision',
+      ref: 'HEAD',
       short: true
     });
 
@@ -19,7 +20,7 @@ module.exports = function(grunt) {
 
     grunt.util.spawn({
       cmd: 'git',
-      args: ['rev-parse', options.short && '--short', 'HEAD'].filter(Boolean)
+      args: ['rev-parse', options.short && '--short', options.ref].filter(Boolean)
     }, function(err, result) {
       if (err) {
         grunt.log.error(err);
@@ -30,7 +31,7 @@ module.exports = function(grunt) {
       var revision = result.toString();
 
       grunt.config(options.property, revision);
-      grunt.log.writeln('Found Git revision "' + revision + '"');
+      grunt.log.writeln(options.ref + ' at revision ' + revision);
 
       done(true);
     });

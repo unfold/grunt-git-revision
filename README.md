@@ -27,6 +27,7 @@ grunt.initConfig({
   revision: {
     options: {
       property: 'meta.revision',
+      ref: 'HEAD',
       short: true
     }
   },
@@ -40,6 +41,12 @@ Type: `String`
 Default value: `'meta.revision'`
 
 What configuration property to write the revision to.
+
+#### options.ref
+Type: `String`
+Default value: `'HEAD'`
+
+What ref to read the revision from.
 
 #### options.short
 Type: `Boolean`
