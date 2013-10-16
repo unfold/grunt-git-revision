@@ -1,0 +1,42 @@
+{
+  "name": "grunt-git-revision",
+  "description": "Get current Git revision",
+  "version": "0.0.1",
+  "homepage": "https://github.com/unfold/grunt-git-revision",
+  "author": {
+    "name": "Simen Brekken",
+    "email": "simen@unfold.no"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unfold/grunt-git-revision.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unfold/grunt-git-revision/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/unfold/grunt-git-revision/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
