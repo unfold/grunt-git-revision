@@ -43,13 +43,14 @@ module.exports = function(grunt) {
       if(options.property.log){
         grunt.util.spawn({
           cmd: 'git',
-          args: ['rev-parse', options.short && '--short', options.ref].filter(Boolean)
+          args: ['log', '-1', '--pretty=%B', options.ref].filter(Boolean)
         }, function(err, result) {
           if (err) {
             grunt.log.error(err);
             return done(false);
           }
 
+          grunt.log.writeln('LOG: ' + result.toString());
           done(true);
         });
       } else {
