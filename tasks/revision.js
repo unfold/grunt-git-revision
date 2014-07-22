@@ -51,7 +51,7 @@ module.exports = function(grunt) {
           }
 
           grunt.log.writeln('LOG: ' + result.toString());
-          grunt.config(options.property.log, result);
+          grunt.config(options.property.log, result.toString());
           done(true);
         });
       } else {
