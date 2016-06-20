@@ -28,7 +28,7 @@ module.exports = function(grunt) {
         return done(false);
       }
 
-      var revision = result.toString();
+      var revision = options.version || result.toString();
 
       grunt.config(options.property, revision);
       grunt.log.writeln(options.ref + ' at revision ' + revision);
