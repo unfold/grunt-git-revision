@@ -28,7 +28,8 @@ grunt.initConfig({
     options: {
       property: 'meta.revision',
       ref: 'HEAD',
-      short: true
+      short: true,
+      version : Data.now() // your custom version string
     }
   },
 })
